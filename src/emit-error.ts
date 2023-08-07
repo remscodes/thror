@@ -1,6 +1,6 @@
 import { createError } from './create-error';
-import type { ErrorOptions } from './models';
+import type { ErrorProps } from './models';
 
-export function emitError(name: string, message: string, options?: ErrorOptions): never {
-  throw createError(name, message, options);
+export function emitError(name: string, message: string, extra?: ErrorProps): never {
+  throw createError(name, message, extra);
 }

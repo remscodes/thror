@@ -1,6 +1,6 @@
 import { CustomError } from './custom-error';
-import type { ErrorOptions } from './models';
+import type { ErrorProps } from './models';
 
-export function createError(name: string, message: string, options: ErrorOptions = {}): CustomError {
-  return new CustomError(name, message, options);
+export function createError(name: string, message: string, extra?: ErrorProps): CustomError {
+  return new CustomError(name, message, extra);
 }

@@ -1,4 +1,4 @@
-import type { ErrorOptions } from './models';
+import type { ErrorProps } from './models';
 import type { Indexed } from './models/shared.model';
 
 export interface CustomError extends Indexed {}
@@ -8,7 +8,7 @@ export class CustomError extends Error {
   public constructor(
     public override name: string,
     public override message: string,
-    extra: ErrorOptions = {}
+    extra: ErrorProps = {}
   ) {
     super(message);
 
@@ -17,9 +17,7 @@ export class CustomError extends Error {
     Object
       .entries(extra)
       .filter(([key]: [string, any]) => key !== 'withStack')
-      .forEach(([key, value]: [string, any]) => {
-        if (value !== undefined) this[key] = value;
-      });
+      .forEach(([key, value]: [string, any]) => this[key] = value);
 
     if (!withStack) this.stack = undefined;
   }

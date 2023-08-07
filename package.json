@@ -1,14 +1,14 @@
 {
   "name": "thror",
   "version": "0.1.0-alpha.1",
-  "description": "Utility for creating and displaying an error",
+  "description": "Simple error creation utility",
   "license": "MIT",
   "author": {
     "name": "Rémy Abitbol"
   },
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "cross-env TS_NODE_PROJECT='./tsconfig.spec.json' TS_NODE_TRANSPILE_ONLY=1 mocha",
     "test:watch": "npm run test -- --watch",
     "types": "tsc --noEmit",
     "rm-dist": "node scripts/rm-dist.cjs",
@@ -16,7 +16,6 @@
     "prebuild": "npm run types && npm run rm-dist",
     "pretest": "npm run types"
   },
-  "type": "module",
   "main": "./dist/index.js",
   "types": "./dist/types/index.d.ts",
   "files": [
@@ -33,7 +32,17 @@
     "tslib": "^2.6.1"
   },
   "devDependencies": {
+    "@types/chai": "^4.3.5",
+    "@types/mocha": "^10.0.1",
     "@types/node": "^16.18.39",
+    "@types/sinon": "^10.0.16",
+    "@types/sinon-chai": "^3.2.9",
+    "chai": "^4.3.7",
+    "cross-env": "^7.0.3",
+    "mocha": "^10.2.0",
+    "sinon": "^15.2.0",
+    "sinon-chai": "^3.7.0",
+    "ts-node": "^10.9.1",
     "typescript": "^5.1.6"
   },
   "keywords": [
