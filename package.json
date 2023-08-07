@@ -1,7 +1,7 @@
 {
   "name": "thror",
   "version": "0.1.0-alpha.1",
-  "description": "",
+  "description": "Utility for creating and displaying an error",
   "license": "MIT",
   "author": {
     "name": "Rémy Abitbol"
@@ -24,7 +24,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/RemsCodes/thror"
   },
   "engines": {
     "node": ">=16.0.0"
