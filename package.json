@@ -1,0 +1,47 @@
+{
+  "name": "thror",
+  "version": "0.1.0-alpha.1",
+  "description": "",
+  "license": "MIT",
+  "author": {
+    "name": "Rémy Abitbol"
+  },
+  "scripts": {
+    "build": "tsc",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "test:watch": "npm run test -- --watch",
+    "types": "tsc --noEmit",
+    "rm-dist": "node scripts/rm-dist.cjs",
+    "prepublishOnly": "npm run test && npm run build",
+    "prebuild": "npm run types && npm run rm-dist",
+    "pretest": "npm run types"
+  },
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/types/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "tslib": "^2.6.1"
+  },
+  "devDependencies": {
+    "@types/node": "^16.18.39",
+    "typescript": "^5.1.6"
+  },
+  "keywords": [
+    "throw",
+    "error",
+    "console",
+    "logger"
+  ],
+  "packageManager": "pnpm@8.6.11",
+  "sideEffects": false
+}
