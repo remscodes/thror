@@ -17,7 +17,7 @@
     "rm-dist": "node scripts/rm-dist.cjs",
     "prepublishOnly": "npm run test && npm run build",
     "prebuild": "npm run types && npm run rm-dist",
-    "pretest": "npm run types"
+    "pretest": "npm run types && npm run types -- -p ./tsconfig.spec.json"
   },
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
