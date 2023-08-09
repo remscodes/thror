@@ -1,7 +1,7 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "declaration": false,
+    "module": "CommonJS",
     "types": [
       "mocha",
       "node"
@@ -11,9 +11,6 @@
     "test"
   ],
   "exclude": [
-    "node_modules",
-    "dist",
-    "src",
-    "scripts"
+    "src"
   ]
 }

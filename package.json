@@ -4,10 +4,13 @@
   "description": "Simple error creation utility",
   "license": "MIT",
   "author": {
-    "name": "Rémy Abitbol"
+    "name": "Rémy Abitbol",
+    "url": "https://github.com/remscodes"
   },
   "scripts": {
-    "build": "tsc",
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc -p ./tsconfig.esm.json",
+    "build:cjs": "tsc -p ./tsconfig.cjs.json",
     "test": "cross-env TS_NODE_PROJECT='./tsconfig.spec.json' TS_NODE_TRANSPILE_ONLY=1 mocha",
     "test:watch": "npm run test -- --watch",
     "types": "tsc --noEmit",
@@ -16,14 +19,24 @@
     "prebuild": "npm run types && npm run rm-dist",
     "pretest": "npm run types"
   },
-  "main": "./dist/index.js",
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.js",
   "types": "./dist/types/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "node": "./dist/cjs/index.js",
+      "require": "./dist/cjs/index.js",
+      "default": "./dist/esm/index.js",
+      "types": "./dist/types/index.d.ts"
+    }
+  },
   "files": [
     "dist"
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/RemsCodes/thror"
+    "url": "https://github.com/remscodes/thror"
   },
   "engines": {
     "node": ">=16.0.0"

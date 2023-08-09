@@ -2,22 +2,18 @@
   "compileOnSave": false,
   "compilerOptions": {
     "target": "ESNext",
-    "module": "CommonJS",
+    "module": "ES2022",
     "lib": [
       "ESNext"
     ],
     "baseUrl": "./",
-    "outDir": "./dist",
-    "declarationDir": "./dist/types",
     "sourceMap": true,
-    "declaration": true,
     "removeComments": true,
     "downlevelIteration": true,
     "importHelpers": true,
     "moduleResolution": "node",
     "isolatedModules": true,
     "esModuleInterop": true,
-    "resolveJsonModule": true,
     "useDefineForClassFields": true,
     "allowSyntheticDefaultImports": true,
     "alwaysStrict": true,
@@ -29,10 +25,7 @@
     "skipLibCheck": true,
     "forceConsistentCasingInFileNames": true
   },
-  "exclude": [
-    "node_modules",
-    "dist",
-    "test",
-    "scripts"
+  "include": [
+    "src"
   ]
 }
