@@ -3,7 +3,9 @@ import type { Indexed } from './models/shared.model';
 
 export interface CustomError extends Indexed {}
 
-export class CustomError extends Error {
+export interface Thror extends Indexed {}
+
+export class Thror extends Error {
 
   public constructor(
     public override name: string,
