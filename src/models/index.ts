@@ -1,1 +1,1 @@
-export type { ErrorProps } from './error-props.model';
+export type { ErrorExtra } from './error-extra.model';

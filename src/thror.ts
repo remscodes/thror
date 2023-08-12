@@ -1,4 +1,4 @@
-import type { ErrorProps } from './models';
+import type { ErrorExtra } from './models';
 import type { Indexed } from './models/shared.model';
 
 export interface CustomError extends Indexed {}
@@ -10,7 +10,7 @@ export class Thror extends Error {
   public constructor(
     public override name: string,
     public override message: string,
-    extra: ErrorProps = {}
+    extra: ErrorExtra = {}
   ) {
     super(message);
 
