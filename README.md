@@ -6,9 +6,10 @@
 <div align="center">
 
 [![github ci](https://img.shields.io/github/actions/workflow/status/remscodes/thror/npm-ci.yml?&logo=github&label=CI&style=for-the-badge)](https://github.com/remscodes/thror/actions/workflows/npm-ci.yml)
-[![codecov coverage](https://img.shields.io/codecov/c/github/remscodes/thror/main.svg?style=for-the-badge)](https://codecov.io/gh/remscodes/thror)
-[![npm version](https://img.shields.io/npm/v/thror.svg?style=for-the-badge)](https://www.npmjs.org/package/thror)
-[![npm monthly download](https://img.shields.io/npm/dm/thror.svg?style=for-the-badge)](https://www.npmjs.org/package/thror)
+[![codecov coverage](https://img.shields.io/codecov/c/github/remscodes/thror/main.svg?style=for-the-badge&logo=codecov)](https://codecov.io/gh/remscodes/thror)
+[![npm version](https://img.shields.io/npm/v/thror.svg?&style=for-the-badge&logo=npm)](https://www.npmjs.org/package/thror)
+[![npm monthly download](https://img.shields.io/npm/dm/thror.svg?style=for-the-badge&logo=npm)](https://www.npmjs.org/package/thror)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/thror?style=for-the-badge)](https://bundlephobia.com/package/thror)
 [![license](https://img.shields.io/github/license/remscodes/thror.svg?style=for-the-badge)](LICENSE)
 
 </div>
@@ -57,7 +58,7 @@ emitError('MyException', 'Cannot create user without username.', { status: 400 }
 ### Extra
 
 ```ts
-export interface ErrorExtra {
+interface ErrorExtra {
   // Preserve the error stack
   // default : false
   withStack?: boolean;
