@@ -64,6 +64,6 @@
     "console",
     "logger"
   ],
-  "packageManager": "pnpm@8.6.11",
+  "packageManager": "pnpm@8.6.12",
   "sideEffects": false
 }
