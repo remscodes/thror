@@ -22,9 +22,6 @@ devDependencies:
   '@types/sinon':
     specifier: ^10.0.16
     version: 10.0.16
-  '@types/sinon-chai':
-    specifier: ^3.2.9
-    version: 3.2.9
   chai:
     specifier: ^4.3.7
     version: 4.3.7
@@ -37,9 +34,6 @@ devDependencies:
   sinon:
     specifier: ^15.2.0
     version: 15.2.0
-  sinon-chai:
-    specifier: ^3.7.0
-    version: 3.7.0(chai@4.3.7)(sinon@15.2.0)
   ts-node:
     specifier: ^10.9.1
     version: 10.9.1(@types/node@16.18.39)(typescript@5.1.6)
@@ -128,13 +122,6 @@ packages:
 
   /@types/node@16.18.39:
     resolution: {integrity: sha512-8q9ZexmdYYyc5/cfujaXb4YOucpQxAV4RMG0himLyDUOEr8Mr79VrqsFI+cQ2M2h89YIuy95lbxuYjxT4Hk4kQ==}
-    dev: true
-
-  /@types/sinon-chai@3.2.9:
-    resolution: {integrity: sha512-/19t63pFYU0ikrdbXKBWj9PCdnKyTd0Qkz0X91Ta081cYsq90OxYdcWwK/dwEoDa6dtXgj2HJfmzgq+QZTHdmQ==}
-    dependencies:
-      '@types/chai': 4.3.5
-      '@types/sinon': 10.0.16
     dev: true
 
   /@types/sinon@10.0.16:
@@ -696,16 +683,6 @@ packages:
   /shebang-regex@3.0.0:
     resolution: {integrity: sha512-7++dFhtcx3353uBaq8DDR4NuxBetBzC7ZQOhmTQInHEd6bSrXdiEyzCvG07Z44UYdLShWUyXt5M/yhz8ekcb1A==}
     engines: {node: '>=8'}
-    dev: true
-
-  /sinon-chai@3.7.0(chai@4.3.7)(sinon@15.2.0):
-    resolution: {integrity: sha512-mf5NURdUaSdnatJx3uhoBOrY9dtL19fiOtAdT1Azxg3+lNJFiuN0uzaU3xX1LeAfL17kHQhTAJgpsfhbMJMY2g==}
-    peerDependencies:
-      chai: ^4.0.0
-      sinon: '>=4.0.0'
-    dependencies:
-      chai: 4.3.7
-      sinon: 15.2.0
     dev: true
 
   /sinon@15.2.0:
