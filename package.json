@@ -41,9 +41,6 @@
   "engines": {
     "node": ">=16.0.0"
   },
-  "dependencies": {
-    "tslib": "^2.6.1"
-  },
   "devDependencies": {
     "@types/chai": "^4.3.5",
     "@types/mocha": "^10.0.1",
