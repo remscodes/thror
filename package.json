@@ -8,16 +8,16 @@
     "url": "https://github.com/remscodes"
   },
   "scripts": {
-    "build": "npm run build:esm && npm run build:cjs",
+    "build": "npm run build:esm & npm run build:cjs",
     "build:esm": "tsc -p ./tsconfig.esm.json",
     "build:cjs": "tsc -p ./tsconfig.cjs.json",
     "test": "cross-env TS_NODE_PROJECT='./tsconfig.spec.json' TS_NODE_TRANSPILE_ONLY=1 mocha",
-    "test:watch": "npm run test -- --watch",
     "types": "tsc --noEmit",
+    "types:spec": "npm run types -- -p ./tsconfig.spec.json",
+    "types:all": "npm run types & npm run types:spec",
     "rm-dist": "node scripts/rm-dist.cjs",
-    "prepublishOnly": "npm run test && npm run build",
-    "prebuild": "npm run types && npm run rm-dist",
-    "pretest": "npm run types && npm run types -- -p ./tsconfig.spec.json"
+    "prebuild": "npm run rm-dist",
+    "pretest": "npm run types:all"
   },
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
@@ -34,6 +34,9 @@
   "files": [
     "dist"
   ],
+  "publishConfig": {
+    "access": "public"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/remscodes/thror"

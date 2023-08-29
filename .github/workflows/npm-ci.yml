@@ -41,4 +41,3 @@ jobs:
 
       - name: Test project
         run: pnpm run test
-

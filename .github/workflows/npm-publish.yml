@@ -29,6 +29,9 @@ jobs:
       - name: Clean install node modules
         run: pnpm install --frozen-lockfile --ignore-scripts
 
+      - name: Build project
+        run: pnpm run build
+
       - name: Test project
         run: pnpm run test
 
@@ -58,7 +61,10 @@ jobs:
       - name: Clean install node modules
         run: pnpm install --frozen-lockfile --ignore-scripts
 
+      - name: Build project
+        run: pnpm run build
+
       - name: Publish to NPM
-        run: npm publish --access public --provenance
+        run: npm publish --provenance
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_PUBLISH_TOKEN}}
