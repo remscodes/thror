@@ -5,11 +5,10 @@
 
 <div align="center">
 
-[![github ci](https://img.shields.io/github/actions/workflow/status/remscodes/thror/npm-ci.yml?&logo=github&label=CI&style=for-the-badge)](https://github.com/remscodes/thror/actions/workflows/npm-ci.yml)
+[![github ci](https://img.shields.io/github/actions/workflow/status/remscodes/thror/npm-ci.yml.svg?logo=github&label=CI&style=for-the-badge)](https://github.com/remscodes/thror/actions/workflows/npm-ci.yml)
 [![codecov coverage](https://img.shields.io/codecov/c/github/remscodes/thror/main.svg?style=for-the-badge&logo=codecov)](https://codecov.io/gh/remscodes/thror)
-[![npm version](https://img.shields.io/npm/v/thror.svg?&style=for-the-badge&logo=npm)](https://www.npmjs.org/package/thror)
-[![npm monthly download](https://img.shields.io/npm/dm/thror.svg?style=for-the-badge&logo=npm)](https://www.npmjs.org/package/thror)
-[![bundle size](https://img.shields.io/bundlephobia/minzip/thror?style=for-the-badge)](https://bundlephobia.com/package/thror)
+[![npm version](https://img.shields.io/npm/v/thror.svg?style=for-the-badge&logo=npm)](https://www.npmjs.org/package/thror)
+[![bundle size](https://img.shields.io/bundlephobia/minzip/thror.svg?style=for-the-badge)](https://bundlephobia.com/package/thror)
 [![license](https://img.shields.io/github/license/remscodes/thror.svg?style=for-the-badge)](LICENSE)
 
 </div>
@@ -30,9 +29,8 @@ Example :
 
 ```ts
 import { createError } from 'thror';
-import type { Thror } from 'thror';
 
-const err: Thror = createError('MyException', 'Cannot create user without username.', { status: 400 });
+const err = createError('MyException', 'Cannot create user without username.', { status: 400 });
 
 console.log(err.name); // MyException
 console.log(err.message); // Cannot create user without username.
@@ -62,9 +60,11 @@ interface ErrorExtra {
   // Preserve the error stack
   // default : false
   withStack?: boolean;
-  // The original Error
-  // For example in the case you want to display a clearer error with Thror than the original one  
-  original?: Error
+
+  // The original error
+  // For example in the case you want to display a clearer error with Thror and store the original one
+  original?: any;
+
   // Whatever you want
   [key: string]: any;
 }
