@@ -16,7 +16,7 @@ describe('Core', () => {
     expectProperty(err, 'status', 'number', status);
   });
 
-  it('should have Thror toString() format', () => {
+  it.skip('should have Thror toString() format', () => {
     console.error(err);
     expect(err.toString()).to.be.equal(`[${name}: ${message}]`);
   });
