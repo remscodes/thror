@@ -1,4 +1,5 @@
 import { expect } from 'chai';
+import type { Thror } from '../src';
 import { createError } from '../src';
 import { expectProperty } from './fixtures/expect-util';
 
@@ -7,7 +8,7 @@ describe('Core', () => {
   const message: string = 'Bad token';
   const status: number = 400;
 
-  const err: Error = createError(name, message, { status, withStack: false });
+  const err: Thror = createError(name, message, { status, withStack: false });
 
   it('should have properties', () => {
     expectProperty(err, 'name', 'string', name);
@@ -15,8 +16,8 @@ describe('Core', () => {
     expectProperty(err, 'status', 'number', status);
   });
 
-  it('should have toString() format', () => {
+  it('should have Thror toString() format', () => {
     console.error(err);
-    expect(err.toString()).to.be.equal(`${name}: ${message}`);
+    expect(err.toString()).to.be.equal(`[${name}: ${message}]`);
   });
 });
