@@ -1,6 +1,6 @@
 {
   "name": "thror",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple error creation utility",
   "license": "MIT",
   "author": {
@@ -15,7 +15,7 @@
     "types": "tsc --noEmit",
     "types:spec": "npm run types -- -p ./tsconfig.spec.json",
     "types:all": "npm run types & npm run types:spec",
-    "rm-dist": "node scripts/rm-dist.cjs",
+    "rm-dist": "node ./scripts/rm-dist.cjs",
     "prebuild": "npm run rm-dist",
     "pretest": "npm run types:all"
   },
@@ -42,7 +42,7 @@
     "url": "https://github.com/remscodes/thror"
   },
   "engines": {
-    "node": ">=16.0.0"
+    "node": ">=18.0.0"
   },
   "devDependencies": {
     "@types/chai": "^4.3.5",
@@ -62,6 +62,6 @@
     "console",
     "logger"
   ],
-  "packageManager": "pnpm@8.6.12",
+  "packageManager": "pnpm@8.7.4",
   "sideEffects": false
 }
