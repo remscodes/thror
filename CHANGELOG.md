@@ -1,4 +1,9 @@
-<a name="1.0.0"></a>
+# 1.0.1 (2023-09-08)
+
+### Improvements
+
+- Change `ErrorExtra.original` type from `Error` to `any`.
+
 # 1.0.0 (2023-08-11)
 
 ### Features
