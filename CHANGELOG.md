@@ -4,6 +4,8 @@
 
 - Change `ErrorExtra.original` type from `Error` to `any`.
 
+> Commits : https://github.com/remscodes/thror/commits/v1.0.1
+
 # 1.0.0 (2023-08-11)
 
 ### Features
