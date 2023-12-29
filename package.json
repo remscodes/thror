@@ -8,9 +8,7 @@
     "url": "https://github.com/remscodes"
   },
   "scripts": {
-    "build": "npm run build:esm && npm run build:cjs",
-    "build:esm": "tsc -p ./tsconfig.esm.json",
-    "build:cjs": "tsc -p ./tsconfig.cjs.json",
+    "build": "rollup -c",
     "test": "cross-env TS_NODE_PROJECT='./tsconfig.spec.json' TS_NODE_TRANSPILE_ONLY=1 mocha",
     "types": "tsc --noEmit",
     "types:spec": "npm run types -- -p ./tsconfig.spec.json",
@@ -19,15 +17,14 @@
     "prebuild": "npm run rm-dist",
     "pretest": "npm run types:all"
   },
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
+  "type": "module",
+  "main": "./dist/cjs/index.cjs",
+  "module": "./dist/esm/index.mjs",
   "types": "./dist/types/index.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/esm/index.js",
-      "node": "./dist/cjs/index.js",
-      "require": "./dist/cjs/index.js",
-      "default": "./dist/esm/index.js",
+      "import": "./dist/esm/index.mjs",
+      "require": "./dist/cjs/index.cjs",
       "types": "./dist/types/index.d.ts"
     }
   },
@@ -45,13 +42,19 @@
     "node": ">=18.13.0"
   },
   "devDependencies": {
+    "@rollup/plugin-terser": "^0.4.4",
     "@types/chai": "^4.3.5",
     "@types/mocha": "^10.0.6",
     "@types/node": "^20.10.5",
     "@types/sinon": "^17.0.2",
     "chai": "^4.3.7",
     "cross-env": "^7.0.3",
+    "esbuild": "^0.19.10",
     "mocha": "^10.2.0",
+    "rollup": "^4.9.1",
+    "rollup-plugin-bundle-size": "^1.0.3",
+    "rollup-plugin-dts": "^6.1.0",
+    "rollup-plugin-esbuild": "^6.1.0",
     "sinon": "^17.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.1.6"
