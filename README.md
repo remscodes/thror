@@ -57,15 +57,15 @@ emitError('MyException', 'Cannot create user without username.', { status: 400 }
 
 ```ts
 interface ErrorExtra {
-  // Preserve the error stack
+  // Preserves the error stack.
   // default : false
   withStack?: boolean;
 
-  // The original error
-  // For example in the case you want to display a clearer error with Thror and store the original one
+  // The original error.
+  // For example in the case you want to display a clearer error with Thror and store the original one.
   original?: any;
 
-  // Whatever you want
+  // Whatever you want.
   [key: string]: any;
 }
 ```
