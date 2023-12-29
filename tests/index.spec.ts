@@ -10,6 +10,10 @@ describe('Core', () => {
 
   const err: Thror = createError(name, message, { status, withStack: false });
 
+  it('should be an Error', () => {
+    expect(err).to.be.a('Error');
+  });
+
   it('should have properties', () => {
     expectProperty(err, 'name', 'string', name);
     expectProperty(err, 'message', 'string', message);
@@ -17,7 +21,6 @@ describe('Core', () => {
   });
 
   it.skip('should have Thror toString() format', () => {
-    console.error(err);
     expect(err.toString()).to.be.equal(`[${name}: ${message}]`);
   });
 });
