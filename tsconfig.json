@@ -4,13 +4,12 @@
     "target": "ESNext",
     "module": "ES2022",
     "lib": [
-      "ESNext"
+      "ES2022"
     ],
     "baseUrl": "./",
+    "declarationDir": "./dist/types",
     "sourceMap": true,
     "removeComments": true,
-    "downlevelIteration": true,
-    "importHelpers": false,
     "moduleResolution": "node",
     "isolatedModules": true,
     "esModuleInterop": true,
