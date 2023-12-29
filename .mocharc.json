@@ -1,14 +1,13 @@
 {
-  "require": "ts-node/register",
-  "loader": "ts-node/esm",
-  "extensions": [
-    "ts"
+  "node-option": [
+    "experimental-specifier-resolution=node",
+    "loader=ts-node/esm"
   ],
   "spec": [
-    "./tests/**/*.spec.*"
+    "./tests/**/*.spec.ts"
   ],
   "watch-files": [
-    "src",
-    "test"
+    "./src",
+    "./tests"
   ]
 }
