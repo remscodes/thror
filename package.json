@@ -46,7 +46,6 @@
     "@types/chai": "^4.3.5",
     "@types/mocha": "^10.0.6",
     "@types/node": "^20.10.5",
-    "@types/sinon": "^17.0.2",
     "chai": "^4.3.7",
     "cross-env": "^7.0.3",
     "esbuild": "^0.19.10",
@@ -55,7 +54,6 @@
     "rollup-plugin-bundle-size": "^1.0.3",
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-esbuild": "^6.1.0",
-    "sinon": "^17.0.1",
     "ts-node": "^10.9.2",
     "typescript": "^5.1.6"
   },
