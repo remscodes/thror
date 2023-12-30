@@ -7,8 +7,8 @@
       "ES2022"
     ],
     "baseUrl": "./",
-    "declarationDir": "./dist/types",
     "sourceMap": true,
+    "declaration": false,
     "removeComments": true,
     "moduleResolution": "node",
     "isolatedModules": true,
