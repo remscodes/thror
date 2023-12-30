@@ -8,5 +8,8 @@
   },
   "include": [
     "tests"
+  ],
+  "exclude": [
+    "tests/imports"
   ]
 }
