@@ -48,7 +48,7 @@
     "@types/node": "^20.11.27",
     "chai": "^5.1.0",
     "cross-env": "^7.0.3",
-    "esbuild": "^0.20.1",
+    "esbuild": "^0.20.2",
     "mocha": "^10.3.0",
     "rollup": "^4.13.0",
     "rollup-plugin-bundle-size": "^1.0.3",
