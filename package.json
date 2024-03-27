@@ -50,7 +50,7 @@
     "cross-env": "^7.0.3",
     "esbuild": "^0.20.2",
     "mocha": "^10.3.0",
-    "rollup": "^4.13.0",
+    "rollup": "^4.13.1",
     "rollup-plugin-bundle-size": "^1.0.3",
     "rollup-plugin-dts": "^6.1.0",
     "rollup-plugin-esbuild": "^6.1.1",
