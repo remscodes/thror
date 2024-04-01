@@ -39,7 +39,7 @@
     "url": "https://github.com/remscodes/thror"
   },
   "engines": {
-    "node": ">=18.13.0"
+    "node": "^20.9.0"
   },
   "devDependencies": {
     "@rollup/plugin-terser": "^0.4.4",
