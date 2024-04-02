@@ -1,6 +1,5 @@
 import { expect } from 'chai';
-import type { Thror } from '../src';
-import { createError } from '../src';
+import { createError, emitError, type Thror } from '../src';
 import { expectProperty } from './fixtures/expect-util';
 
 describe('Core', () => {
@@ -8,19 +7,26 @@ describe('Core', () => {
   const message: string = 'Bad token';
   const status: number = 400;
 
-  const err: Thror = createError(name, message, { status, withStack: false });
+  it('should create an Error with custom `status` property', () => {
+    const err: Thror = createError(name, message, { status });
 
-  it('should be an Error', () => {
     expect(err).to.be.a('Error');
-  });
 
-  it('should have properties', () => {
+    expectProperty(err, 'withStack', 'boolean', false);
     expectProperty(err, 'name', 'string', name);
     expectProperty(err, 'message', 'string', message);
     expectProperty(err, 'status', 'number', status);
   });
 
+  it('should throw an Error immediately', () => {
+    expect(() => {
+      emitError(name, message, { status });
+    }).to.throw();
+  });
+
   it.skip('should have Thror toString() format', () => {
+    const err: Thror = createError(name, message, { status });
+
     expect(err.toString()).to.be.equal(`[${name}: ${message}]`);
   });
 });
