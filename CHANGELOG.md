@@ -1,3 +1,11 @@
+# 1.0.3 (2024-04-02)
+
+- Remove build minimizer.
+- Add tests for lib import.
+- Update dependencies.
+
+> Commits : https://github.com/remscodes/thror/commits/v1.0.3
+
 # 1.0.2 (2023-12-29)
 
 ### Improvements
