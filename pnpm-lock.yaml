@@ -15,8 +15,8 @@ importers:
         specifier: ^10.0.6
         version: 10.0.6
       '@types/node':
-        specifier: ^20.13.0
-        version: 20.13.0
+        specifier: ^20.14.0
+        version: 20.14.0
       chai:
         specifier: ^5.1.1
         version: 5.1.1
@@ -43,7 +43,7 @@ importers:
         version: 6.1.1(esbuild@0.21.4)(rollup@4.18.0)
       ts-node:
         specifier: ^10.9.2
-        version: 10.9.2(@types/node@20.13.0)(typescript@5.4.5)
+        version: 10.9.2(@types/node@20.14.0)(typescript@5.4.5)
       typescript:
         specifier: ^5.4.5
         version: 5.4.5
@@ -324,8 +324,8 @@ packages:
   '@types/mocha@10.0.6':
     resolution: {integrity: sha512-dJvrYWxP/UcXm36Qn36fxhUKu8A/xMRXVT2cliFF1Z7UA9liG5Psj3ezNSZw+5puH2czDXRLcXQxf8JbJt0ejg==}
 
-  '@types/node@20.13.0':
-    resolution: {integrity: sha512-FM6AOb3khNkNIXPnHFDYaHerSv8uN22C91z098AnGccVu+Pcdhi+pNUFDi0iLmPIsVE0JBD0KVS7mzUYt4nRzQ==}
+  '@types/node@20.14.0':
+    resolution: {integrity: sha512-5cHBxFGJx6L4s56Bubp4fglrEpmyJypsqI6RgzMfBHWUJQGWAAi8cWcgetEbZXHYXo9C2Fa4EEds/uSyS4cxmA==}
 
   acorn-walk@8.2.0:
     resolution: {integrity: sha512-k+iyHEuPgSw6SbuDpGQM+06HQUa04DZ3o+F6CSzXMvvI5KMvnaEqXe+YVe555R9nn6GPt404fos4wcgpw12SDA==}
@@ -1012,7 +1012,7 @@ snapshots:
 
   '@types/mocha@10.0.6': {}
 
-  '@types/node@20.13.0':
+  '@types/node@20.14.0':
     dependencies:
       undici-types: 5.26.5
 
@@ -1477,14 +1477,14 @@ snapshots:
     dependencies:
       is-number: 7.0.0
 
-  ts-node@10.9.2(@types/node@20.13.0)(typescript@5.4.5):
+  ts-node@10.9.2(@types/node@20.14.0)(typescript@5.4.5):
     dependencies:
       '@cspotcode/source-map-support': 0.8.1
       '@tsconfig/node10': 1.0.9
       '@tsconfig/node12': 1.0.11
       '@tsconfig/node14': 1.0.3
       '@tsconfig/node16': 1.0.4
-      '@types/node': 20.13.0
+      '@types/node': 20.14.0
       acorn: 8.10.0
       acorn-walk: 8.2.0
       arg: 4.1.3
