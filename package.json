@@ -42,7 +42,7 @@
     "node": ">=18"
   },
   "devDependencies": {
-    "@types/chai": "^4.3.19",
+    "@types/chai": "^5.0.0",
     "@types/mocha": "^10.0.8",
     "@types/node": "^22.6.1",
     "chai": "^5.1.1",
